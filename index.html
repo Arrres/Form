@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Registration Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <form id="survey-form" action='#'>
+      <fieldset>
+        <label id="name-label">
+          Enter Your First Name: 
+          <input id="name" 
+          type="text" 
+          name="first-name" 
+          placeholder="First Name" 
+          required />
+          </label>
+        <label id="name-two-label">Enter Your Last Name: <input id="name-two" type="text" name="last-name" placeholder="Last Name" required /></label>
+        <label id="email-label">Enter Your Email: <input id="email" type="email" name="email" placeholder="Your Email @gmail.com"required /></label>
+        <label>Create a New Password: <input id="password" type="password" name="password" pattern="[a-z0-5]{8,}" required /></label>
+      </fieldset>
+      <fieldset>
+        <label><input type="radio" value="personal" name="account-type"  class="inline"/> Personal Account</label>
+        <label><input type="radio" name="account-type" value="business"
+        class="inline"/> Business Account</label>
+        <label>
+          <input class="inline" type="checkbox"  name="terms" value="true" required /> I accept the <a href="#">terms and conditions</a>
+        </label>
+        <label>
+          <input class="inline"type="checkbox" name="terms" value="false" required /> I not accept the <a href="#">terms and conditions</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label>Upload a profile picture: <input type="file" name="file" /></label>
+        <label id="number-label">Input your age (years): <input id="number" type="number" name="age" min="13" max="120" placeholder="13" />
+        </label>
+        <label>How did you hear about us?
+          <select id="dropdown" name="referrer">
+            <option value="1">Social Networks</option>
+            <option value="2">YouTube Channel</option>
+            <option value="3">Forum</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label>Provide a bio:
+          <textarea  name="bio" rows="10" cols="30" placeholder="I like coding on the beach..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
